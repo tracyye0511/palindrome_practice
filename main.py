@@ -5,9 +5,15 @@ Given a string text, return true if it is a palindrome, or false otherwise.
 
 For this question, letters are NOT case-sensitive, for example, "LEVeL" is a palindrome.
 """
+from selectors import SelectSelector
+
+
 # Change this function so it works correctly
 def is_palindrome(text):
-    return False
+    text = test_text.lower()
+    clean_text = ''.join(char for char in text if char.isalnum())
+    return True if clean_text == text else False
+
 
 
 if __name__ == '__main__':
